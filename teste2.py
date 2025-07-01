@@ -45,7 +45,7 @@ print(area) #printa a area do circulo
 
 ##############
 
-x = input()
+x = input()  #sempre retorna uma string
 print(x)  # printa o valor da variavel x
 ##quando se uso o input com aspas é possivel criar um prmpt para o usuario digitar algo no terminal
 # Exemplo de uso do input
@@ -78,4 +78,19 @@ print("Olá, " + nome + "!")  # dá oi para o usuario
 print("Seu nome tem " + str(len(nome)) + " letras.")  # conta quant
 print("Em 5 anos, você terá " + str(idade + 5) + " anos.")  # fala quantos anos o usuario terá em 5 anos. tem que converter o numero em string para poder concatenar com o texto
 print("Olá, " + nome + "! " + "Seu nome tem " + str(len(nome)) + " letras." + " Em 5 anos, você terá " + str(idade + 5) + " anos.")  # dá oi para o usuario
+# Resposta do desafio usando f-string, que é uma forma mais simples e legível de formatar strings
+print(f'olá, {nome}! Seu nome tem {len(nome)} letras. Em 5 anos, você terá {idade + 5} anos.')  # usando f-string para formatar a string de forma mais simples e legivel
 
+#colocar o numero de letras com duas casas decimais
+print(f'olá, {nome}! Seu nome tem {len(nome):.2f} letras. Em 5 anos, você terá {idade + 5} anos.')  # usando f-string para formatar a string de forma mais simples e legivel
+#colorar 3 digitos internos no numero de letras, como é 4 inseriu 2 zeros a esquerda
+print(f'olá, {nome}! Seu nome tem {len(nome):03d} letras. \n Em 5 anos, você terá {idade + 5} anos.')  # usando f-string para formatar a string de forma mais simples e legivel
+
+
+
+#pega os inputs do usuario '\n ' é usado para pular uma linha (dar um enter)
+nome = input("Qual é o seu nome? \n digite aqui:")  # pede o nome do usuario na linha seguint
+idade = int(input("Qual é a sua idade? "))  # pede a idade do usuario
+print("-"*10)  # printa uma linha de traços para separar as informações
+print(f'olá, {nome}! Seu nome tem {len(nome):03d} letras. \n Em 5 anos, você terá {idade + 5} anos.')  # usando f-string para formatar a string de forma mais simples e legivel
+print("-"*10)  # printa uma linha de traços para separar as informações
